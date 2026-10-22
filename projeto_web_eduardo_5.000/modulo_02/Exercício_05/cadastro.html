@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercadinho Seu Zé - Cadastrar Produto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🛒 Mercadinho Seu Zé - Sistema ERP</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="produtos.html">Estoque de Produtos</a>
+    <a href="cadastro.html">Cadastrar Produto</a>
+  </nav>
+
+  <main class="conteudo">
+    <h2>➕ Cadastro de Mercadorias</h2>
+        <!-- desafio-10.formulario -->
+    <form action="produtos.html" method="get">
+      
+      <!-- SEÇÃO 1: INFORMAÇÕES BÁSICAS -->
+       <!-- desafio-1.formulario -->
+      <fieldset>
+        <legend>Dados do Produto</legend>
+
+        <div class="campo">
+          <label for="nome">Nome do Produto:</label>
+          <!-- desafio-9.formulario -->
+          <input type="text" id="nome" name="nome" placeholder="Ex: Café Torrado 500g" required>
+        </div>
+
+        <div class="linha-dupla">
+          <div class="campo">
+            <label for="categoria">Categoria:</label>
+             <!-- desafio-2.formulario -->
+              <!-- desafio-4.formulario -->
+            <select id="categoria" name="categoria" required>
+              <option value="">Selecione...</option>
+              <option value="alimentos">Alimentos</option>
+              <option value="bebidas">Bebidas</option>
+              <option value="laticinios">Laticínios</option>
+              <option value="limpeza">Limpeza</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="unidade">Unidade de Medida:</label>
+            <select id="unidade" name="unidade">
+              <option value="un">Unidade (UN)</option>
+              <option value="kg">Quilo (KG)</option>
+              <option value="lt">Litro (LT)</option>
+              <option value="pct">Pacote (PCT)</option>
+            </select>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- SEÇÃO 2: VALORES E VALIDADE -->
+      <fieldset>
+        <legend>Preço e Validade</legend>
+          <!-- desafio-6.formulario -->
+        <div class="linha-dupla">
+          <div class="campo">
+            <label for="preco">Preço Unitário (R$):</label>
+            <!-- desafio-3.formulario -->
+            <input type="number" id="preco" name="preco" step="0.01" placeholder="0.00" required>
+          </div>
+          
+
+          <div class="campo">
+            <label for="qtd">Quantidade em Estoque:</label>
+            <input type="number" id="qtd" name="qtd" placeholder="0" required>
+          </div>
+        </div>
+          <!-- desafio-7.formulario -->
+        <div class="campo">
+          <label for="validade">Data de Validade:</label>
+          <input type="date" id="validade" name="validade" required>
+        </div>
+        <div class="campo">
+          <label for="fabricação">Data de Fabricação:</label>
+          <input type="date" id="fabricação" name="fabricação" required>
+        </div>
+            <!-- ia.desafio-8.formulario -->
+        <div class="campo">
+          <label>Características do Produto:</label>
+          <div class="grupo-checkbox">
+            
+            <label class="checkbox-label">
+              <input type="checkbox" name="perecivel" value="sim"> Perecível
+            </label>
+
+            <label class="checkbox-label">
+              <input type="checkbox" name="importado" value="sim">Importado
+            </label>
+
+  </div>
+</div>
+      </fieldset>
+
+      <button type="submit">Salvar Produto no Sistema</button>
+    </form>
+  </main>
+
+</body>
+</html>
